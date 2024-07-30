@@ -228,6 +228,7 @@ indicates ATT&CK-like Defense Evasion techniques on the remote system.
    
 #### Relevant Indicator(s) Detected by Bro/Zeek
 * `dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation` contains any of the following:
+    * `InitShutdown::BaseInitiateShutdownEx`
     * `eventlog::ElfrClearELFW`
     * `eventlog::ElfrClearELFA`
     * `IEventService::EvtRpcClearLog`
@@ -287,7 +288,6 @@ indicates ATT&CK-like Impact techniques on the remote system.
 #### Relevant Indicator(s) Detected by Bro/Zeek
 * `dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation` contains any of the following:
     * `InitShutdown::BaseInitiateShutdown`
-    * `InitShutdown::BaseInitiateShutdownEx`
     * `WindowsShutdown::WsdrInitiateShutdown`
     * `winreg::BaseInitiateSystemShutdown`
     * `winreg::BaseInitiateSystemShutdownEx`
